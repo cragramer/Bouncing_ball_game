@@ -1,0 +1,1252 @@
+Component: ARM Compiler 5.06 update 5 (build 528) Tool: armlink [4d35e2]
+
+==============================================================================
+
+Section Cross References
+
+    stm32f10x_rcc.o(i.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.data) for .data
+    stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data) for .data
+    system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClock) for SetSysClock
+    startup_stm32f10x_hd.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_hd.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_hd.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_hd.o(RESET) refers to startup_stm32f10x_hd.o(STACK) for __initial_sp
+    startup_stm32f10x_hd.o(RESET) refers to startup_stm32f10x_hd.o(.text) for Reset_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.NMI_Handler) for NMI_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.MemManage_Handler) for MemManage_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.BusFault_Handler) for BusFault_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.UsageFault_Handler) for UsageFault_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SVC_Handler) for SVC_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.DebugMon_Handler) for DebugMon_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_stm32f10x_hd.o(RESET) refers to stm32f10x_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32f10x_hd.o(RESET) refers to eie3810_timer.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to eie3810_timer.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+    startup_stm32f10x_hd.o(RESET) refers to eie3810_core.o(i.USART1_IRQHandler) for USART1_IRQHandler
+    startup_stm32f10x_hd.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_hd.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
+    startup_stm32f10x_hd.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32f10x_hd.o(.text) refers to startup_stm32f10x_hd.o(HEAP) for Heap_Mem
+    startup_stm32f10x_hd.o(.text) refers to startup_stm32f10x_hd.o(STACK) for Stack_Mem
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawCircle) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawDot) for EIE3810_TFTLCD_DrawDot
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawDot) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmd) for EIE3810_TFTLCD_WrCmd
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawDot) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrData) for EIE3810_TFTLCD_WrData
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_FillRectangle) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmd) for EIE3810_TFTLCD_WrCmd
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_FillRectangle) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrData) for EIE3810_TFTLCD_WrData
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_Init) refers to main.o(i.Delay) for Delay
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_Init) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_SetParameter) for EIE3810_TFTLCD_SetParameter
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SetParameter) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmdData) for EIE3810_TFTLCD_WrCmdData
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SetParameter) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmd) for EIE3810_TFTLCD_WrCmd
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SetParameter) refers to main.o(i.Delay) for Delay
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_0) for EIE3810_TFTLCD_rect_0
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_1) for EIE3810_TFTLCD_rect_1
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_2) for EIE3810_TFTLCD_rect_2
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_3) for EIE3810_TFTLCD_rect_3
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_4) for EIE3810_TFTLCD_rect_4
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_5) for EIE3810_TFTLCD_rect_5
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_6) for EIE3810_TFTLCD_rect_6
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_7) for EIE3810_TFTLCD_rect_7
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_8) for EIE3810_TFTLCD_rect_8
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_9) for EIE3810_TFTLCD_rect_9
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmd) for EIE3810_TFTLCD_WrCmd
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrData) for EIE3810_TFTLCD_WrData
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar) refers to eie3810_tftlcd.o(.constdata) for .constdata
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar2412) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmd) for EIE3810_TFTLCD_WrCmd
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar2412) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrData) for EIE3810_TFTLCD_WrData
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar2412) refers to eie3810_tftlcd.o(.constdata) for .constdata
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_FillRectangle) for EIE3810_TFTLCD_FillRectangle
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_0) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_0) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) for EIE3810_TFTLCD_rect_x
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_1) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_2) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_2) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) for EIE3810_TFTLCD_rect_x
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_3) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_3) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) for EIE3810_TFTLCD_rect_x
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_4) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_4) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) for EIE3810_TFTLCD_rect_x
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_5) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_5) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) for EIE3810_TFTLCD_rect_x
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_6) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_6) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) for EIE3810_TFTLCD_rect_x
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_7) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_7) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) for EIE3810_TFTLCD_rect_x
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_8) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_8) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) for EIE3810_TFTLCD_rect_x
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_9) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) for EIE3810_TFTLCD_rect_y
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_9) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) for EIE3810_TFTLCD_rect_x
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_FillRectangle) for EIE3810_TFTLCD_FillRectangle
+    eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_FillRectangle) for EIE3810_TFTLCD_FillRectangle
+    eie3810_usart.o(i.EIE3810_USART1_init) refers to fflt_clz.o(x$fpl$ffltu) for __aeabi_ui2f
+    eie3810_usart.o(i.EIE3810_USART1_init) refers to fdiv.o(x$fpl$fdiv) for __aeabi_fdiv
+    eie3810_usart.o(i.EIE3810_USART1_init) refers to ffixu.o(x$fpl$ffixu) for __aeabi_f2uiz
+    eie3810_usart.o(i.EIE3810_USART1_init) refers to faddsub_clz.o(x$fpl$frsb) for __aeabi_frsub
+    eie3810_usart.o(i.EIE3810_USART1_init) refers to scalbnf.o(x$fpl$scalbnf) for __ARM_scalbnf
+    eie3810_usart.o(i.EIE3810_USART2_init) refers to fflt_clz.o(x$fpl$ffltu) for __aeabi_ui2f
+    eie3810_usart.o(i.EIE3810_USART2_init) refers to fdiv.o(x$fpl$fdiv) for __aeabi_fdiv
+    eie3810_usart.o(i.EIE3810_USART2_init) refers to ffixu.o(x$fpl$ffixu) for __aeabi_f2uiz
+    eie3810_usart.o(i.EIE3810_USART2_init) refers to faddsub_clz.o(x$fpl$frsb) for __aeabi_frsub
+    eie3810_usart.o(i.EIE3810_USART2_init) refers to scalbnf.o(x$fpl$scalbnf) for __ARM_scalbnf
+    eie3810_led.o(i.toggle_led1) refers to eie3810_led.o(i.LED1_read) for LED1_read
+    eie3810_led.o(i.toggle_led1) refers to eie3810_led.o(i.LED1_off) for LED1_off
+    eie3810_led.o(i.toggle_led1) refers to eie3810_led.o(i.LED1_on) for LED1_on
+    eie3810_core.o(i.EIE3810_TFTLCD_ShowString) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar) for EIE3810_TFTLCD_ShowChar
+    eie3810_core.o(i.EIE3810_TFTLCD_ShowString) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar2412) for EIE3810_TFTLCD_ShowChar2412
+    eie3810_core.o(i.EIE3810_TFTLCD_Welcome) refers to eie3810_core.o(i.EIE3810_TFTLCD_ShowString) for EIE3810_TFTLCD_ShowString
+    eie3810_core.o(i.EIE3810_TFTLCD_Welcome) refers to main.o(i.Delay) for Delay
+    eie3810_core.o(i.EIE3810_next_page) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean) for EIE3810_TFTLCD_clean
+    eie3810_core.o(i.EIE3810_next_page) refers to eie3810_core.o(i.EIE3810_TFTLCD_ShowString) for EIE3810_TFTLCD_ShowString
+    eie3810_core.o(i.EIE3810_next_page) refers to eie3810_key.o(i.key_0_on) for key_0_on
+    eie3810_core.o(i.EIE3810_next_page) refers to eie3810_key.o(i.key_up_on) for key_up_on
+    eie3810_core.o(i.EIE3810_next_page) refers to eie3810_key.o(i.key_1_on) for key_1_on
+    eie3810_core.o(i.EIE3810_third_page) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean) for EIE3810_TFTLCD_clean
+    eie3810_core.o(i.EIE3810_third_page) refers to eie3810_core.o(i.EIE3810_TFTLCD_ShowString) for EIE3810_TFTLCD_ShowString
+    eie3810_core.o(i.USART1_IRQHandler) refers to eie3810_led.o(i.LED0_on) for LED0_on
+    eie3810_core.o(i.USART1_IRQHandler) refers to main.o(.data) for DIRECTION
+    eie3810_core.o(i.check_pause) refers to eie3810_key.o(i.key_1_on) for key_1_on
+    eie3810_core.o(i.check_pause) refers to eie3810_joypad.o(i.JOYPAD_Read) for JOYPAD_Read
+    eie3810_core.o(i.check_pause) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.direction_lookup) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.display_time) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar) for EIE3810_TFTLCD_ShowChar
+    eie3810_core.o(i.display_time) refers to eie3810_core.o(i.EIE3810_TFTLCD_ShowString) for EIE3810_TFTLCD_ShowString
+    eie3810_core.o(i.display_time) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.draw_the_ball) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawCircle) for EIE3810_TFTLCD_DrawCircle
+    eie3810_core.o(i.draw_the_ball) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.draw_the_board_1) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_FillRectangle) for EIE3810_TFTLCD_FillRectangle
+    eie3810_core.o(i.draw_the_board_1) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.draw_the_board_2) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_FillRectangle) for EIE3810_TFTLCD_FillRectangle
+    eie3810_core.o(i.draw_the_board_2) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.hit_board_1) refers to eie3810_core.o(i.show_bounce) for show_bounce
+    eie3810_core.o(i.hit_board_1) refers to eie3810_buzzer.o(i.makebuzzer) for makebuzzer
+    eie3810_core.o(i.hit_board_1) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.hit_board_2) refers to eie3810_core.o(i.show_bounce) for show_bounce
+    eie3810_core.o(i.hit_board_2) refers to eie3810_buzzer.o(i.makebuzzer) for makebuzzer
+    eie3810_core.o(i.hit_board_2) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.hit_the_left) refers to eie3810_buzzer.o(i.makebuzzer) for makebuzzer
+    eie3810_core.o(i.hit_the_left) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.hit_the_lower) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.hit_the_right) refers to eie3810_buzzer.o(i.makebuzzer) for makebuzzer
+    eie3810_core.o(i.hit_the_right) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.hit_the_upper) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.move_board) refers to eie3810_key.o(i.key_2_on) for key_2_on
+    eie3810_core.o(i.move_board) refers to eie3810_core.o(i.move_board_1) for move_board_1
+    eie3810_core.o(i.move_board) refers to eie3810_key.o(i.key_0_on) for key_0_on
+    eie3810_core.o(i.move_board) refers to eie3810_joypad.o(i.JOYPAD_Read) for JOYPAD_Read
+    eie3810_core.o(i.move_board) refers to eie3810_core.o(i.move_board_2) for move_board_2
+    eie3810_core.o(i.move_board) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.move_board_1) refers to eie3810_key.o(i.key_2_on) for key_2_on
+    eie3810_core.o(i.move_board_1) refers to eie3810_core.o(i.draw_the_board_1) for draw_the_board_1
+    eie3810_core.o(i.move_board_1) refers to eie3810_key.o(i.key_0_on) for key_0_on
+    eie3810_core.o(i.move_board_1) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.move_board_2) refers to eie3810_core.o(i.draw_the_board_2) for draw_the_board_2
+    eie3810_core.o(i.move_board_2) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(i.hit_board_1) for hit_board_1
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(i.hit_board_2) for hit_board_2
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(i.hit_the_left) for hit_the_left
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(i.hit_the_right) for hit_the_right
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(i.hit_the_upper) for hit_the_upper
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(i.hit_the_lower) for hit_the_lower
+    eie3810_core.o(i.move_the_ball) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawCircle) for EIE3810_TFTLCD_DrawCircle
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(i.draw_the_ball) for draw_the_ball
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(i.draw_the_board_1) for draw_the_board_1
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(i.draw_the_board_2) for draw_the_board_2
+    eie3810_core.o(i.move_the_ball) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.print_end_screen) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean) for EIE3810_TFTLCD_clean
+    eie3810_core.o(i.print_end_screen) refers to main.o(i.Delay) for Delay
+    eie3810_core.o(i.print_end_screen) refers to eie3810_core.o(i.EIE3810_TFTLCD_ShowString) for EIE3810_TFTLCD_ShowString
+    eie3810_core.o(i.print_end_screen) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar2412) for EIE3810_TFTLCD_ShowChar2412
+    eie3810_core.o(i.print_end_screen) refers to eie3810_core.o(.data) for .data
+    eie3810_core.o(i.set_direction) refers to eie3810_usart.o(i.EIE3810_USART1_init) for EIE3810_USART1_init
+    eie3810_core.o(i.set_direction) refers to eie3810_core.o(i.USART1_IRQHandler) for USART1_IRQHandler
+    eie3810_core.o(i.set_direction) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean) for EIE3810_TFTLCD_clean
+    eie3810_core.o(i.set_direction) refers to eie3810_core.o(i.EIE3810_TFTLCD_ShowString) for EIE3810_TFTLCD_ShowString
+    eie3810_core.o(i.set_direction) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar) for EIE3810_TFTLCD_ShowChar
+    eie3810_core.o(i.set_direction) refers to main.o(i.Delay) for Delay
+    eie3810_core.o(i.set_direction) refers to eie3810_core.o(i.direction_lookup) for direction_lookup
+    eie3810_core.o(i.set_direction) refers to main.o(.data) for DIRECTION
+    eie3810_core.o(i.set_number) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean) for EIE3810_TFTLCD_clean
+    eie3810_core.o(i.set_number) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment) for EIE3810_TFTLCD_SevenSegment
+    eie3810_core.o(i.set_number) refers to main.o(i.Delay) for Delay
+    eie3810_core.o(i.show_bounce) refers to eie3810_core.o(i.EIE3810_TFTLCD_ShowString) for EIE3810_TFTLCD_ShowString
+    eie3810_core.o(i.show_bounce) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar) for EIE3810_TFTLCD_ShowChar
+    eie3810_core.o(i.show_bounce) refers to eie3810_core.o(.data) for .data
+    eie3810_joypad.o(i.JOYPAD_Read) refers to main.o(i.Delay) for Delay
+    eie3810_timer.o(i.TIM3_IRQHandler) refers to eie3810_joypad.o(i.JOYPAD_Read) for JOYPAD_Read
+    eie3810_timer.o(i.TIM3_IRQHandler) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean) for EIE3810_TFTLCD_clean
+    eie3810_timer.o(i.TIM3_IRQHandler) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar) for EIE3810_TFTLCD_ShowChar
+    eie3810_buzzer.o(i.makebuzzer) refers to main.o(i.Delay) for Delay
+    main.o(i.main) refers to eie3810_clock.o(i.EIE3810_clock_tree_init) for EIE3810_clock_tree_init
+    main.o(i.main) refers to main.o(i.EIE3810_NVIC_SetPriorityGroup) for EIE3810_NVIC_SetPriorityGroup
+    main.o(i.main) refers to eie3810_joypad.o(i.JOYPAD_Init) for JOYPAD_Init
+    main.o(i.main) refers to eie3810_timer.o(i.EIE3810_SYSTICK_Init) for EIE3810_SYSTICK_Init
+    main.o(i.main) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_Init) for EIE3810_TFTLCD_Init
+    main.o(i.main) refers to eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean) for EIE3810_TFTLCD_clean
+    main.o(i.main) refers to eie3810_key.o(i.EIE3810_KEY_Init) for EIE3810_KEY_Init
+    main.o(i.main) refers to eie3810_led.o(i.EIE3810_LED_Init) for EIE3810_LED_Init
+    main.o(i.main) refers to eie3810_buzzer.o(i.EIE3810_Buzzer_Init) for EIE3810_Buzzer_Init
+    main.o(i.main) refers to eie3810_core.o(i.EIE3810_TFTLCD_Welcome) for EIE3810_TFTLCD_Welcome
+    main.o(i.main) refers to main.o(i.Delay) for Delay
+    main.o(i.main) refers to eie3810_core.o(i.EIE3810_next_page) for EIE3810_next_page
+    main.o(i.main) refers to eie3810_core.o(i.EIE3810_third_page) for EIE3810_third_page
+    main.o(i.main) refers to eie3810_core.o(i.set_direction) for set_direction
+    main.o(i.main) refers to eie3810_core.o(i.set_number) for set_number
+    main.o(i.main) refers to eie3810_core.o(i.draw_the_board_1) for draw_the_board_1
+    main.o(i.main) refers to eie3810_core.o(i.draw_the_board_2) for draw_the_board_2
+    main.o(i.main) refers to eie3810_core.o(i.display_time) for display_time
+    main.o(i.main) refers to eie3810_core.o(i.show_bounce) for show_bounce
+    main.o(i.main) refers to eie3810_core.o(i.move_board) for move_board
+    main.o(i.main) refers to eie3810_core.o(i.move_the_ball) for move_the_ball
+    main.o(i.main) refers to eie3810_core.o(i.print_end_screen) for print_end_screen
+    main.o(i.main) refers to eie3810_core.o(.data) for ball_x
+    main.o(i.main) refers to main.o(.data) for .data
+    main.o(i.main) refers to eie3810_core.o(.data) for ball_period
+    main.o(i.main) refers to eie3810_core.o(.data) for game_start
+    main.o(i.main) refers to eie3810_timer.o(.data) for task2HeartBeat
+    main.o(i.main) refers to eie3810_timer.o(.data) for task1HeartBeat
+    main.o(i.main) refers to eie3810_timer.o(.data) for task3HeartBeat
+    main.o(i.main) refers to eie3810_core.o(.data) for board_period
+    main.o(i.main) refers to eie3810_core.o(.data) for can_pause
+    stm32f10x_it.o(i.SysTick_Handler) refers to eie3810_core.o(i.check_pause) for check_pause
+    stm32f10x_it.o(i.SysTick_Handler) refers to eie3810_core.o(.data) for game_pause
+    stm32f10x_it.o(i.SysTick_Handler) refers to eie3810_core.o(.data) for game_start
+    stm32f10x_it.o(i.SysTick_Handler) refers to eie3810_timer.o(.data) for task1HeartBeat
+    stm32f10x_it.o(i.SysTick_Handler) refers to eie3810_timer.o(.data) for task2HeartBeat
+    stm32f10x_it.o(i.SysTick_Handler) refers to eie3810_timer.o(.data) for task3HeartBeat
+    stm32f10x_it.o(i.SysTick_Handler) refers to eie3810_timer.o(.data) for task4HeartBeat
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    faddsub_clz.o(x$fpl$fadd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$fadd) refers to faddsub_clz.o(x$fpl$fsub) for _fsub1
+    faddsub_clz.o(x$fpl$fadd) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    faddsub_clz.o(x$fpl$fadd) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    faddsub_clz.o(x$fpl$frsb) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$frsb) refers to faddsub_clz.o(x$fpl$fadd) for _fadd1
+    faddsub_clz.o(x$fpl$frsb) refers to faddsub_clz.o(x$fpl$fsub) for _fsub1
+    faddsub_clz.o(x$fpl$fsub) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$fsub) refers to faddsub_clz.o(x$fpl$fadd) for _fadd1
+    faddsub_clz.o(x$fpl$fsub) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fdiv.o(x$fpl$frdiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fdiv.o(x$fpl$frdiv) refers to fdiv.o(x$fpl$fdiv) for _fdiv1
+    fdiv.o(x$fpl$fdiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fdiv.o(x$fpl$fdiv) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    fdiv.o(x$fpl$fdiv) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    ffixu.o(x$fpl$ffixu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ffixu.o(x$fpl$ffixu) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    ffixu.o(x$fpl$ffixur) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ffixu.o(x$fpl$ffixur) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fflt_clz.o(x$fpl$ffltu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fflt_clz.o(x$fpl$fflt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fflt_clz.o(x$fpl$ffltn) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    scalbnf.o(x$fpl$scalbnf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    scalbnf.o(x$fpl$scalbnf) refers to fcheck1.o(x$fpl$fcheck1) for __fpl_fcheck_NaN1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    fcheck1.o(x$fpl$fcheck1) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcheck1.o(x$fpl$fcheck1) refers to retnan.o(x$fpl$retnan) for __fpl_return_NaN
+    fnaninf.o(x$fpl$fnaninf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fretinf.o(x$fpl$fretinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    retnan.o(x$fpl$retnan) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    retnan.o(x$fpl$retnan) refers to trapv.o(x$fpl$trapveneer) for __fpl_cmpreturn
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_stm32f10x_hd.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    trapv.o(x$fpl$trapveneer) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing stm32f10x_rcc.o(i.RCC_ADCCLKConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd), (28 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd), (28 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd), (28 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd), (28 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd), (28 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AdjustHSICalibrationValue), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_BackupResetCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearFlag), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearITPendingBit), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClockSecuritySystemCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_DeInit), (64 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetClocksFreq), (172 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetFlagStatus), (48 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetITStatus), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetSYSCLKSource), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HCLKConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HSEConfig), (56 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ITConfig), (28 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSEConfig), (40 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_MCOConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PCLK1Config), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PCLK2Config), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLLCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLLConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKConfig), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_SYSCLKConfig), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_USBCLKConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp), (48 bytes).
+    Removing stm32f10x_rcc.o(.data), (20 bytes).
+    Removing core_cm3.o(.emb_text), (32 bytes).
+    Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (124 bytes).
+    Removing system_stm32f10x.o(.data), (20 bytes).
+    Removing eie3810_tftlcd.o(.constdata), (1140 bytes).
+    Removing eie3810_usart.o(i.EIE3810_USART1_EXTIInit), (28 bytes).
+    Removing eie3810_usart.o(i.EIE3810_USART2_init), (144 bytes).
+    Removing eie3810_usart.o(i.USART_print), (72 bytes).
+    Removing eie3810_led.o(i.LED0_off), (16 bytes).
+    Removing eie3810_led.o(i.LED0_read), (24 bytes).
+    Removing eie3810_led.o(i.LED1_off), (16 bytes).
+    Removing eie3810_led.o(i.LED1_on), (16 bytes).
+    Removing eie3810_led.o(i.LED1_read), (24 bytes).
+    Removing eie3810_led.o(i.toggle_led1), (24 bytes).
+    Removing eie3810_core.o(.data), (1 bytes).
+    Removing eie3810_joypad.o(i.JOYPAD_Delay), (8 bytes).
+    Removing eie3810_timer.o(i.EIE3810_TIM3_Init), (76 bytes).
+    Removing eie3810_timer.o(i.EIE3810_TIM3_PWMInit), (140 bytes).
+    Removing eie3810_timer.o(i.EIE3810_TIM4_Init), (72 bytes).
+    Removing eie3810_buzzer.o(i.Buzzer_Toggle), (32 bytes).
+
+52 unused section(s) (total 2941 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/faddsub.s                       0x00000000   Number         0  faddsub_clz.o ABSOLUTE
+    ../fplib/fcheck1.s                       0x00000000   Number         0  fcheck1.o ABSOLUTE
+    ../fplib/fdiv.s                          0x00000000   Number         0  fdiv.o ABSOLUTE
+    ../fplib/ffixu.s                         0x00000000   Number         0  ffixu.o ABSOLUTE
+    ../fplib/fflt.s                          0x00000000   Number         0  fflt_clz.o ABSOLUTE
+    ../fplib/fnaninf.s                       0x00000000   Number         0  fnaninf.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ../fplib/fretinf.s                       0x00000000   Number         0  fretinf.o ABSOLUTE
+    ../fplib/retnan.s                        0x00000000   Number         0  retnan.o ABSOLUTE
+    ../fplib/scalbnf.s                       0x00000000   Number         0  scalbnf.o ABSOLUTE
+    ../fplib/trapv.s                         0x00000000   Number         0  trapv.o ABSOLUTE
+    ../fplib/usenofp.s                       0x00000000   Number         0  usenofp.o ABSOLUTE
+    Board\EIE3810_Buzzer.c                   0x00000000   Number         0  eie3810_buzzer.o ABSOLUTE
+    Board\EIE3810_Clock.c                    0x00000000   Number         0  eie3810_clock.o ABSOLUTE
+    Board\EIE3810_Core.c                     0x00000000   Number         0  eie3810_core.o ABSOLUTE
+    Board\EIE3810_Interrupt.c                0x00000000   Number         0  eie3810_interrupt.o ABSOLUTE
+    Board\EIE3810_Joypad.c                   0x00000000   Number         0  eie3810_joypad.o ABSOLUTE
+    Board\EIE3810_LED.c                      0x00000000   Number         0  eie3810_led.o ABSOLUTE
+    Board\EIE3810_TFTLCD.c                   0x00000000   Number         0  eie3810_tftlcd.o ABSOLUTE
+    Board\EIE3810_Timer.c                    0x00000000   Number         0  eie3810_timer.o ABSOLUTE
+    Board\EIE3810_USART.c                    0x00000000   Number         0  eie3810_usart.o ABSOLUTE
+    Board\EIE3810_key.c                      0x00000000   Number         0  eie3810_key.o ABSOLUTE
+    Core\\core_cm3.c                         0x00000000   Number         0  core_cm3.o ABSOLUTE
+    Core\core_cm3.c                          0x00000000   Number         0  core_cm3.o ABSOLUTE
+    Core\startup_stm32f10x_hd.s              0x00000000   Number         0  startup_stm32f10x_hd.o ABSOLUTE
+    Core\system_stm32f10x.c                  0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    Fw_lib\src\stm32f10x_rcc.c               0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    User\main.c                              0x00000000   Number         0  main.o ABSOLUTE
+    User\stm32f10x_it.c                      0x00000000   Number         0  stm32f10x_it.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    RESET                                    0x08000000   Section      304  startup_stm32f10x_hd.o(RESET)
+    !!!main                                  0x08000130   Section        8  __main.o(!!!main)
+    !!!scatter                               0x08000138   Section       52  __scatter.o(!!!scatter)
+    !!handler_copy                           0x0800016c   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_zi                             0x08000188   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x080001a4   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x080001a6   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x080001a6   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x080001a8   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x080001aa   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x080001aa   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x080001aa   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x080001aa   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x080001aa   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x080001aa   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x080001aa   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x080001ac   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x080001ac   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x080001ac   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x080001b2   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x080001b2   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x080001b6   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x080001b6   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x080001be   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x080001c0   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x080001c0   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x080001c4   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x080001cc   Section       64  startup_stm32f10x_hd.o(.text)
+    .text                                    0x0800020c   Section        0  heapauxi.o(.text)
+    .text                                    0x08000212   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x0800025c   Section        0  exit.o(.text)
+    .text                                    0x08000270   Section        8  libspace.o(.text)
+    .text                                    0x08000278   Section        0  sys_exit.o(.text)
+    .text                                    0x08000284   Section        2  use_no_semi.o(.text)
+    .text                                    0x08000286   Section        0  indicate_semi.o(.text)
+    i.BusFault_Handler                       0x08000286   Section        0  stm32f10x_it.o(i.BusFault_Handler)
+    i.DebugMon_Handler                       0x08000288   Section        0  stm32f10x_it.o(i.DebugMon_Handler)
+    i.Delay                                  0x0800028a   Section        0  main.o(i.Delay)
+    i.EIE3810_Buzzer_Init                    0x08000298   Section        0  eie3810_buzzer.o(i.EIE3810_Buzzer_Init)
+    i.EIE3810_KEY_Init                       0x080002c0   Section        0  eie3810_key.o(i.EIE3810_KEY_Init)
+    i.EIE3810_LED_Init                       0x0800035c   Section        0  eie3810_led.o(i.EIE3810_LED_Init)
+    i.EIE3810_NVIC_SetPriorityGroup          0x080003b8   Section        0  main.o(i.EIE3810_NVIC_SetPriorityGroup)
+    i.EIE3810_SYSTICK_Init                   0x080003dc   Section        0  eie3810_timer.o(i.EIE3810_SYSTICK_Init)
+    i.EIE3810_TFTLCD_DrawCircle              0x080003f4   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawCircle)
+    i.EIE3810_TFTLCD_DrawDot                 0x0800056c   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawDot)
+    i.EIE3810_TFTLCD_FillRectangle           0x080005bc   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_FillRectangle)
+    i.EIE3810_TFTLCD_Init                    0x0800065c   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_Init)
+    i.EIE3810_TFTLCD_SetParameter            0x08000798   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_SetParameter)
+    i.EIE3810_TFTLCD_SevenSegment            0x08001664   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment)
+    i.EIE3810_TFTLCD_ShowChar                0x08001700   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar)
+    i.EIE3810_TFTLCD_ShowChar2412            0x080017ec   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar2412)
+    i.EIE3810_TFTLCD_ShowString              0x080018e4   Section        0  eie3810_core.o(i.EIE3810_TFTLCD_ShowString)
+    i.EIE3810_TFTLCD_Welcome                 0x08001934   Section        0  eie3810_core.o(i.EIE3810_TFTLCD_Welcome)
+    i.EIE3810_TFTLCD_WrCmd                   0x080019f8   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmd)
+    i.EIE3810_TFTLCD_WrCmdData               0x08001a00   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmdData)
+    i.EIE3810_TFTLCD_WrData                  0x08001a10   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrData)
+    i.EIE3810_TFTLCD_clean                   0x08001a1c   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean)
+    i.EIE3810_TFTLCD_rect_0                  0x08001a32   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_0)
+    i.EIE3810_TFTLCD_rect_1                  0x08001a94   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_1)
+    i.EIE3810_TFTLCD_rect_2                  0x08001abc   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_2)
+    i.EIE3810_TFTLCD_rect_3                  0x08001b12   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_3)
+    i.EIE3810_TFTLCD_rect_4                  0x08001b68   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_4)
+    i.EIE3810_TFTLCD_rect_5                  0x08001bae   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_5)
+    i.EIE3810_TFTLCD_rect_6                  0x08001c04   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_6)
+    i.EIE3810_TFTLCD_rect_7                  0x08001c66   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_7)
+    i.EIE3810_TFTLCD_rect_8                  0x08001ca0   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_8)
+    i.EIE3810_TFTLCD_rect_9                  0x08001d12   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_9)
+    i.EIE3810_TFTLCD_rect_x                  0x08001d74   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x)
+    i.EIE3810_TFTLCD_rect_y                  0x08001d84   Section        0  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y)
+    i.EIE3810_USART1_init                    0x08001d94   Section        0  eie3810_usart.o(i.EIE3810_USART1_init)
+    i.EIE3810_clock_tree_init                0x08001e3c   Section        0  eie3810_clock.o(i.EIE3810_clock_tree_init)
+    i.EIE3810_next_page                      0x08001ec8   Section        0  eie3810_core.o(i.EIE3810_next_page)
+    i.EIE3810_third_page                     0x08001fc8   Section        0  eie3810_core.o(i.EIE3810_third_page)
+    i.HardFault_Handler                      0x08002010   Section        0  stm32f10x_it.o(i.HardFault_Handler)
+    i.JOYPAD_Init                            0x08002014   Section        0  eie3810_joypad.o(i.JOYPAD_Init)
+    i.JOYPAD_Read                            0x08002070   Section        0  eie3810_joypad.o(i.JOYPAD_Read)
+    i.LED0_on                                0x080020e4   Section        0  eie3810_led.o(i.LED0_on)
+    i.MemManage_Handler                      0x080020f4   Section        0  stm32f10x_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x080020f6   Section        0  stm32f10x_it.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x080020f8   Section        0  stm32f10x_it.o(i.PendSV_Handler)
+    i.SVC_Handler                            0x080020fa   Section        0  stm32f10x_it.o(i.SVC_Handler)
+    i.SetSysClock                            0x080020fc   Section        0  system_stm32f10x.o(i.SetSysClock)
+    SetSysClock                              0x080020fd   Thumb Code     4  system_stm32f10x.o(i.SetSysClock)
+    i.SetSysClockTo72                        0x08002100   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
+    SetSysClockTo72                          0x08002101   Thumb Code   166  system_stm32f10x.o(i.SetSysClockTo72)
+    i.SysTick_Handler                        0x080021b0   Section        0  stm32f10x_it.o(i.SysTick_Handler)
+    i.SystemInit                             0x08002248   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.TIM3_IRQHandler                        0x08002298   Section        0  eie3810_timer.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x080024ac   Section        0  eie3810_timer.o(i.TIM4_IRQHandler)
+    i.USART1_IRQHandler                      0x080024d0   Section        0  eie3810_core.o(i.USART1_IRQHandler)
+    i.UsageFault_Handler                     0x080024f0   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
+    i.check_pause                            0x080024f4   Section        0  eie3810_core.o(i.check_pause)
+    i.direction_lookup                       0x0800255c   Section        0  eie3810_core.o(i.direction_lookup)
+    i.display_time                           0x080025c0   Section        0  eie3810_core.o(i.display_time)
+    i.draw_the_ball                          0x08002688   Section        0  eie3810_core.o(i.draw_the_ball)
+    i.draw_the_board_1                       0x080026a0   Section        0  eie3810_core.o(i.draw_the_board_1)
+    i.draw_the_board_2                       0x08002718   Section        0  eie3810_core.o(i.draw_the_board_2)
+    i.hit_board_1                            0x08002790   Section        0  eie3810_core.o(i.hit_board_1)
+    i.hit_board_2                            0x080027e8   Section        0  eie3810_core.o(i.hit_board_2)
+    i.hit_the_left                           0x08002840   Section        0  eie3810_core.o(i.hit_the_left)
+    i.hit_the_lower                          0x08002860   Section        0  eie3810_core.o(i.hit_the_lower)
+    i.hit_the_right                          0x08002884   Section        0  eie3810_core.o(i.hit_the_right)
+    i.hit_the_upper                          0x080028a8   Section        0  eie3810_core.o(i.hit_the_upper)
+    i.key_0_on                               0x080028c8   Section        0  eie3810_key.o(i.key_0_on)
+    i.key_1_on                               0x080028dc   Section        0  eie3810_key.o(i.key_1_on)
+    i.key_2_on                               0x080028f0   Section        0  eie3810_key.o(i.key_2_on)
+    i.key_up_on                              0x08002904   Section        0  eie3810_key.o(i.key_up_on)
+    i.main                                   0x08002918   Section        0  main.o(i.main)
+    i.makebuzzer                             0x08002a64   Section        0  eie3810_buzzer.o(i.makebuzzer)
+    i.move_board                             0x08002a84   Section        0  eie3810_core.o(i.move_board)
+    i.move_board_1                           0x08002ad4   Section        0  eie3810_core.o(i.move_board_1)
+    i.move_board_2                           0x08002b44   Section        0  eie3810_core.o(i.move_board_2)
+    i.move_the_ball                          0x08002b98   Section        0  eie3810_core.o(i.move_the_ball)
+    i.print_end_screen                       0x08002c50   Section        0  eie3810_core.o(i.print_end_screen)
+    i.set_direction                          0x08002ce4   Section        0  eie3810_core.o(i.set_direction)
+    i.set_number                             0x08002d60   Section        0  eie3810_core.o(i.set_number)
+    i.show_bounce                            0x08002ddc   Section        0  eie3810_core.o(i.show_bounce)
+    x$fpl$fadd                               0x08002e3c   Section      196  faddsub_clz.o(x$fpl$fadd)
+    _fadd1                                   0x08002e4b   Thumb Code     0  faddsub_clz.o(x$fpl$fadd)
+    x$fpl$fcheck1                            0x08002f00   Section       12  fcheck1.o(x$fpl$fcheck1)
+    x$fpl$fdiv                               0x08002f0c   Section      388  fdiv.o(x$fpl$fdiv)
+    _fdiv1                                   0x08002f0d   Thumb Code     0  fdiv.o(x$fpl$fdiv)
+    x$fpl$ffixu                              0x08003090   Section       62  ffixu.o(x$fpl$ffixu)
+    x$fpl$ffltu                              0x080030d0   Section       38  fflt_clz.o(x$fpl$ffltu)
+    x$fpl$fnaninf                            0x080030f6   Section      140  fnaninf.o(x$fpl$fnaninf)
+    x$fpl$fretinf                            0x08003182   Section       10  fretinf.o(x$fpl$fretinf)
+    x$fpl$frsb                               0x0800318c   Section       20  faddsub_clz.o(x$fpl$frsb)
+    x$fpl$fsub                               0x080031a0   Section      234  faddsub_clz.o(x$fpl$fsub)
+    _fsub1                                   0x080031af   Thumb Code     0  faddsub_clz.o(x$fpl$fsub)
+    x$fpl$retnan                             0x0800328a   Section      100  retnan.o(x$fpl$retnan)
+    x$fpl$scalbnf                            0x080032ee   Section       76  scalbnf.o(x$fpl$scalbnf)
+    x$fpl$trapveneer                         0x0800333a   Section       48  trapv.o(x$fpl$trapveneer)
+    .constdata                               0x0800336a   Section     4940  eie3810_tftlcd.o(.constdata)
+    x$fpl$usenofp                            0x0800336a   Section        0  usenofp.o(x$fpl$usenofp)
+    .data                                    0x20000000   Section       40  eie3810_core.o(.data)
+    .data                                    0x20000028   Section        1  eie3810_core.o(.data)
+    .data                                    0x20000029   Section        1  eie3810_core.o(.data)
+    .data                                    0x2000002a   Section        1  eie3810_core.o(.data)
+    .data                                    0x2000002b   Section        1  eie3810_core.o(.data)
+    .data                                    0x2000002c   Section        1  eie3810_timer.o(.data)
+    .data                                    0x2000002d   Section        1  eie3810_timer.o(.data)
+    .data                                    0x2000002e   Section        1  eie3810_timer.o(.data)
+    .data                                    0x2000002f   Section        1  eie3810_timer.o(.data)
+    .data                                    0x20000030   Section        4  main.o(.data)
+    .data                                    0x20000034   Section        4  main.o(.data)
+    .bss                                     0x20000038   Section       96  libspace.o(.bss)
+    HEAP                                     0x20000098   Section      512  startup_stm32f10x_hd.o(HEAP)
+    Heap_Mem                                 0x20000098   Data         512  startup_stm32f10x_hd.o(HEAP)
+    STACK                                    0x20000298   Section     1024  startup_stm32f10x_hd.o(STACK)
+    Stack_Mem                                0x20000298   Data        1024  startup_stm32f10x_hd.o(STACK)
+    __initial_sp                             0x20000698   Data           0  startup_stm32f10x_hd.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x00000130   Number         0  startup_stm32f10x_hd.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_hd.o(RESET)
+    __Vectors_End                            0x08000130   Data           0  startup_stm32f10x_hd.o(RESET)
+    __main                                   0x08000131   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x08000139   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x08000139   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x08000139   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x08000147   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x0800016d   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_zeroinit                   0x08000189   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x080001a5   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_1                       0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x080001a7   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x080001a9   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x080001ab   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x080001ab   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x080001ab   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x080001ab   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x080001ab   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x080001ab   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x080001ab   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x080001ad   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x080001ad   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x080001ad   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x080001b3   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x080001b3   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x080001b7   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x080001b7   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x080001bf   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x080001c1   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x080001c1   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x080001c5   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x080001cd   Thumb Code     8  startup_stm32f10x_hd.o(.text)
+    ADC1_2_IRQHandler                        0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    ADC3_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    CAN1_RX1_IRQHandler                      0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    CAN1_SCE_IRQHandler                      0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel1_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel2_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel3_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel4_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel5_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel6_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA1_Channel7_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA2_Channel1_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA2_Channel2_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA2_Channel3_IRQHandler                 0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    DMA2_Channel4_5_IRQHandler               0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI0_IRQHandler                         0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI15_10_IRQHandler                     0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI1_IRQHandler                         0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI2_IRQHandler                         0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI3_IRQHandler                         0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI4_IRQHandler                         0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    EXTI9_5_IRQHandler                       0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    FLASH_IRQHandler                         0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    FSMC_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    I2C1_ER_IRQHandler                       0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    I2C1_EV_IRQHandler                       0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    I2C2_ER_IRQHandler                       0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    I2C2_EV_IRQHandler                       0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    PVD_IRQHandler                           0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    RCC_IRQHandler                           0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    RTCAlarm_IRQHandler                      0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    RTC_IRQHandler                           0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    SDIO_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    SPI1_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    SPI2_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    SPI3_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TAMPER_IRQHandler                        0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM1_BRK_IRQHandler                      0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM1_CC_IRQHandler                       0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM1_UP_IRQHandler                       0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM2_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM5_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM6_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM7_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM8_BRK_IRQHandler                      0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM8_CC_IRQHandler                       0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM8_TRG_COM_IRQHandler                  0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    TIM8_UP_IRQHandler                       0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    UART4_IRQHandler                         0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    UART5_IRQHandler                         0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    USART2_IRQHandler                        0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    USART3_IRQHandler                        0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    USBWakeUp_IRQHandler                     0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    WWDG_IRQHandler                          0x080001e7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    __user_initial_stackheap                 0x080001e9   Thumb Code     0  startup_stm32f10x_hd.o(.text)
+    __use_two_region_memory                  0x0800020d   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x0800020f   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08000211   Thumb Code     2  heapauxi.o(.text)
+    __user_setup_stackheap                   0x08000213   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x0800025d   Thumb Code    18  exit.o(.text)
+    __user_libspace                          0x08000271   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x08000271   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x08000271   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x08000279   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x08000285   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x08000285   Thumb Code     2  use_no_semi.o(.text)
+    BusFault_Handler                         0x08000287   Thumb Code     2  stm32f10x_it.o(i.BusFault_Handler)
+    __semihosting_library_function           0x08000287   Thumb Code     0  indicate_semi.o(.text)
+    DebugMon_Handler                         0x08000289   Thumb Code     2  stm32f10x_it.o(i.DebugMon_Handler)
+    Delay                                    0x0800028b   Thumb Code    12  main.o(i.Delay)
+    EIE3810_Buzzer_Init                      0x08000299   Thumb Code    30  eie3810_buzzer.o(i.EIE3810_Buzzer_Init)
+    EIE3810_KEY_Init                         0x080002c1   Thumb Code   142  eie3810_key.o(i.EIE3810_KEY_Init)
+    EIE3810_LED_Init                         0x0800035d   Thumb Code    80  eie3810_led.o(i.EIE3810_LED_Init)
+    EIE3810_NVIC_SetPriorityGroup            0x080003b9   Thumb Code    26  main.o(i.EIE3810_NVIC_SetPriorityGroup)
+    EIE3810_SYSTICK_Init                     0x080003dd   Thumb Code    18  eie3810_timer.o(i.EIE3810_SYSTICK_Init)
+    EIE3810_TFTLCD_DrawCircle                0x080003f5   Thumb Code   376  eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawCircle)
+    EIE3810_TFTLCD_DrawDot                   0x0800056d   Thumb Code    80  eie3810_tftlcd.o(i.EIE3810_TFTLCD_DrawDot)
+    EIE3810_TFTLCD_FillRectangle             0x080005bd   Thumb Code   160  eie3810_tftlcd.o(i.EIE3810_TFTLCD_FillRectangle)
+    EIE3810_TFTLCD_Init                      0x0800065d   Thumb Code   282  eie3810_tftlcd.o(i.EIE3810_TFTLCD_Init)
+    EIE3810_TFTLCD_SetParameter              0x08000799   Thumb Code  3784  eie3810_tftlcd.o(i.EIE3810_TFTLCD_SetParameter)
+    EIE3810_TFTLCD_SevenSegment              0x08001665   Thumb Code   156  eie3810_tftlcd.o(i.EIE3810_TFTLCD_SevenSegment)
+    EIE3810_TFTLCD_ShowChar                  0x08001701   Thumb Code   232  eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar)
+    EIE3810_TFTLCD_ShowChar2412              0x080017ed   Thumb Code   244  eie3810_tftlcd.o(i.EIE3810_TFTLCD_ShowChar2412)
+    EIE3810_TFTLCD_ShowString                0x080018e5   Thumb Code    78  eie3810_core.o(i.EIE3810_TFTLCD_ShowString)
+    EIE3810_TFTLCD_Welcome                   0x08001935   Thumb Code   102  eie3810_core.o(i.EIE3810_TFTLCD_Welcome)
+    EIE3810_TFTLCD_WrCmd                     0x080019f9   Thumb Code     8  eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmd)
+    EIE3810_TFTLCD_WrCmdData                 0x08001a01   Thumb Code    12  eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrCmdData)
+    EIE3810_TFTLCD_WrData                    0x08001a11   Thumb Code     6  eie3810_tftlcd.o(i.EIE3810_TFTLCD_WrData)
+    EIE3810_TFTLCD_clean                     0x08001a1d   Thumb Code    22  eie3810_tftlcd.o(i.EIE3810_TFTLCD_clean)
+    EIE3810_TFTLCD_rect_0                    0x08001a33   Thumb Code    98  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_0)
+    EIE3810_TFTLCD_rect_1                    0x08001a95   Thumb Code    40  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_1)
+    EIE3810_TFTLCD_rect_2                    0x08001abd   Thumb Code    86  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_2)
+    EIE3810_TFTLCD_rect_3                    0x08001b13   Thumb Code    86  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_3)
+    EIE3810_TFTLCD_rect_4                    0x08001b69   Thumb Code    70  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_4)
+    EIE3810_TFTLCD_rect_5                    0x08001baf   Thumb Code    86  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_5)
+    EIE3810_TFTLCD_rect_6                    0x08001c05   Thumb Code    98  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_6)
+    EIE3810_TFTLCD_rect_7                    0x08001c67   Thumb Code    58  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_7)
+    EIE3810_TFTLCD_rect_8                    0x08001ca1   Thumb Code   114  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_8)
+    EIE3810_TFTLCD_rect_9                    0x08001d13   Thumb Code    98  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_9)
+    EIE3810_TFTLCD_rect_x                    0x08001d75   Thumb Code    16  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_x)
+    EIE3810_TFTLCD_rect_y                    0x08001d85   Thumb Code    16  eie3810_tftlcd.o(i.EIE3810_TFTLCD_rect_y)
+    EIE3810_USART1_init                      0x08001d95   Thumb Code   150  eie3810_usart.o(i.EIE3810_USART1_init)
+    EIE3810_clock_tree_init                  0x08001e3d   Thumb Code   130  eie3810_clock.o(i.EIE3810_clock_tree_init)
+    EIE3810_next_page                        0x08001ec9   Thumb Code   182  eie3810_core.o(i.EIE3810_next_page)
+    EIE3810_third_page                       0x08001fc9   Thumb Code    34  eie3810_core.o(i.EIE3810_third_page)
+    HardFault_Handler                        0x08002011   Thumb Code     2  stm32f10x_it.o(i.HardFault_Handler)
+    JOYPAD_Init                              0x08002015   Thumb Code    80  eie3810_joypad.o(i.JOYPAD_Init)
+    JOYPAD_Read                              0x08002071   Thumb Code   106  eie3810_joypad.o(i.JOYPAD_Read)
+    LED0_on                                  0x080020e5   Thumb Code    12  eie3810_led.o(i.LED0_on)
+    MemManage_Handler                        0x080020f5   Thumb Code     2  stm32f10x_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x080020f7   Thumb Code     2  stm32f10x_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x080020f9   Thumb Code     2  stm32f10x_it.o(i.PendSV_Handler)
+    SVC_Handler                              0x080020fb   Thumb Code     2  stm32f10x_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x080021b1   Thumb Code   124  stm32f10x_it.o(i.SysTick_Handler)
+    SystemInit                               0x08002249   Thumb Code    64  system_stm32f10x.o(i.SystemInit)
+    TIM3_IRQHandler                          0x08002299   Thumb Code   532  eie3810_timer.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x080024ad   Thumb Code    28  eie3810_timer.o(i.TIM4_IRQHandler)
+    USART1_IRQHandler                        0x080024d1   Thumb Code    24  eie3810_core.o(i.USART1_IRQHandler)
+    UsageFault_Handler                       0x080024f1   Thumb Code     2  stm32f10x_it.o(i.UsageFault_Handler)
+    check_pause                              0x080024f5   Thumb Code   100  eie3810_core.o(i.check_pause)
+    direction_lookup                         0x0800255d   Thumb Code    96  eie3810_core.o(i.direction_lookup)
+    display_time                             0x080025c1   Thumb Code   186  eie3810_core.o(i.display_time)
+    draw_the_ball                            0x08002689   Thumb Code    20  eie3810_core.o(i.draw_the_ball)
+    draw_the_board_1                         0x080026a1   Thumb Code   114  eie3810_core.o(i.draw_the_board_1)
+    draw_the_board_2                         0x08002719   Thumb Code   114  eie3810_core.o(i.draw_the_board_2)
+    hit_board_1                              0x08002791   Thumb Code    82  eie3810_core.o(i.hit_board_1)
+    hit_board_2                              0x080027e9   Thumb Code    82  eie3810_core.o(i.hit_board_2)
+    hit_the_left                             0x08002841   Thumb Code    28  eie3810_core.o(i.hit_the_left)
+    hit_the_lower                            0x08002861   Thumb Code    30  eie3810_core.o(i.hit_the_lower)
+    hit_the_right                            0x08002885   Thumb Code    32  eie3810_core.o(i.hit_the_right)
+    hit_the_upper                            0x080028a9   Thumb Code    26  eie3810_core.o(i.hit_the_upper)
+    key_0_on                                 0x080028c9   Thumb Code    16  eie3810_key.o(i.key_0_on)
+    key_1_on                                 0x080028dd   Thumb Code    16  eie3810_key.o(i.key_1_on)
+    key_2_on                                 0x080028f1   Thumb Code    16  eie3810_key.o(i.key_2_on)
+    key_up_on                                0x08002905   Thumb Code    16  eie3810_key.o(i.key_up_on)
+    main                                     0x08002919   Thumb Code   264  main.o(i.main)
+    makebuzzer                               0x08002a65   Thumb Code    24  eie3810_buzzer.o(i.makebuzzer)
+    move_board                               0x08002a85   Thumb Code    74  eie3810_core.o(i.move_board)
+    move_board_1                             0x08002ad5   Thumb Code   108  eie3810_core.o(i.move_board_1)
+    move_board_2                             0x08002b45   Thumb Code    80  eie3810_core.o(i.move_board_2)
+    move_the_ball                            0x08002b99   Thumb Code   180  eie3810_core.o(i.move_the_ball)
+    print_end_screen                         0x08002c51   Thumb Code   118  eie3810_core.o(i.print_end_screen)
+    set_direction                            0x08002ce5   Thumb Code    96  eie3810_core.o(i.set_direction)
+    set_number                               0x08002d61   Thumb Code   118  eie3810_core.o(i.set_number)
+    show_bounce                              0x08002ddd   Thumb Code    82  eie3810_core.o(i.show_bounce)
+    __aeabi_fadd                             0x08002e3d   Thumb Code     0  faddsub_clz.o(x$fpl$fadd)
+    _fadd                                    0x08002e3d   Thumb Code   196  faddsub_clz.o(x$fpl$fadd)
+    __fpl_fcheck_NaN1                        0x08002f01   Thumb Code     6  fcheck1.o(x$fpl$fcheck1)
+    __aeabi_fdiv                             0x08002f0d   Thumb Code     0  fdiv.o(x$fpl$fdiv)
+    _fdiv                                    0x08002f0d   Thumb Code   384  fdiv.o(x$fpl$fdiv)
+    __aeabi_f2uiz                            0x08003091   Thumb Code     0  ffixu.o(x$fpl$ffixu)
+    _ffixu                                   0x08003091   Thumb Code    62  ffixu.o(x$fpl$ffixu)
+    __aeabi_ui2f                             0x080030d1   Thumb Code     0  fflt_clz.o(x$fpl$ffltu)
+    _ffltu                                   0x080030d1   Thumb Code    38  fflt_clz.o(x$fpl$ffltu)
+    __fpl_fnaninf                            0x080030f7   Thumb Code   140  fnaninf.o(x$fpl$fnaninf)
+    __fpl_fretinf                            0x08003183   Thumb Code    10  fretinf.o(x$fpl$fretinf)
+    __aeabi_frsub                            0x0800318d   Thumb Code     0  faddsub_clz.o(x$fpl$frsb)
+    _frsb                                    0x0800318d   Thumb Code    20  faddsub_clz.o(x$fpl$frsb)
+    __aeabi_fsub                             0x080031a1   Thumb Code     0  faddsub_clz.o(x$fpl$fsub)
+    _fsub                                    0x080031a1   Thumb Code   234  faddsub_clz.o(x$fpl$fsub)
+    __fpl_return_NaN                         0x0800328b   Thumb Code   100  retnan.o(x$fpl$retnan)
+    __ARM_scalbnf                            0x080032ef   Thumb Code    76  scalbnf.o(x$fpl$scalbnf)
+    __fpl_cmpreturn                          0x0800333b   Thumb Code    48  trapv.o(x$fpl$trapveneer)
+    __I$use$fp                               0x0800336a   Number         0  usenofp.o(x$fpl$usenofp)
+    asc2_1608                                0x0800336a   Data        1520  eie3810_tftlcd.o(.constdata)
+    asc2_2412                                0x0800395a   Data        3420  eie3810_tftlcd.o(.constdata)
+    Region$$Table$$Base                      0x080046b8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080046d8   Number         0  anon$$obj.o(Region$$Table)
+    board_1_speed                            0x20000000   Data           1  eie3810_core.o(.data)
+    board_2_speed                            0x20000001   Data           1  eie3810_core.o(.data)
+    board_1_high                             0x20000002   Data           1  eie3810_core.o(.data)
+    board_2_high                             0x20000003   Data           1  eie3810_core.o(.data)
+    ball_radius                              0x20000004   Data           1  eie3810_core.o(.data)
+    game_end                                 0x20000005   Data           1  eie3810_core.o(.data)
+    game_pause                               0x20000006   Data           1  eie3810_core.o(.data)
+    number_of_bounce                         0x20000007   Data           1  eie3810_core.o(.data)
+    win                                      0x20000008   Data           1  eie3810_core.o(.data)
+    eat                                      0x20000009   Data           1  eie3810_core.o(.data)
+    press                                    0x2000000a   Data           1  eie3810_core.o(.data)
+    board_1_x                                0x2000000c   Data           2  eie3810_core.o(.data)
+    board_1_y                                0x2000000e   Data           2  eie3810_core.o(.data)
+    board_2_x                                0x20000010   Data           2  eie3810_core.o(.data)
+    board_2_y                                0x20000012   Data           2  eie3810_core.o(.data)
+    ball_x                                   0x20000014   Data           2  eie3810_core.o(.data)
+    ball_y                                   0x20000016   Data           2  eie3810_core.o(.data)
+    board_1_wide                             0x20000018   Data           2  eie3810_core.o(.data)
+    board_2_wide                             0x2000001a   Data           2  eie3810_core.o(.data)
+    time                                     0x2000001c   Data           2  eie3810_core.o(.data)
+    ball_x_speed                             0x20000020   Data           4  eie3810_core.o(.data)
+    ball_y_speed                             0x20000024   Data           4  eie3810_core.o(.data)
+    can_pause                                0x20000028   Data           1  eie3810_core.o(.data)
+    ball_period                              0x20000029   Data           1  eie3810_core.o(.data)
+    board_period                             0x2000002a   Data           1  eie3810_core.o(.data)
+    game_start                               0x2000002b   Data           1  eie3810_core.o(.data)
+    task1HeartBeat                           0x2000002c   Data           1  eie3810_timer.o(.data)
+    task2HeartBeat                           0x2000002d   Data           1  eie3810_timer.o(.data)
+    task3HeartBeat                           0x2000002e   Data           1  eie3810_timer.o(.data)
+    task4HeartBeat                           0x2000002f   Data           1  eie3810_timer.o(.data)
+    DIRECTION                                0x20000030   Data           4  main.o(.data)
+    mode                                     0x20000034   Data           4  main.o(.data)
+    __libspace_start                         0x20000038   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000098   Data           0  libspace.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080001cd
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00004710, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000046d8, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000130   Data   RO          355    RESET               startup_stm32f10x_hd.o
+    0x08000130   0x08000130   0x00000008   Code   RO         1071  * !!!main             c_w.l(__main.o)
+    0x08000138   0x08000138   0x00000034   Code   RO         1261    !!!scatter          c_w.l(__scatter.o)
+    0x0800016c   0x0800016c   0x0000001a   Code   RO         1263    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x08000186   0x08000186   0x00000002   PAD
+    0x08000188   0x08000188   0x0000001c   Code   RO         1265    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x080001a4   0x080001a4   0x00000002   Code   RO         1129    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1138    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1140    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1143    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1145    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1147    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1150    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1152    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1154    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1156    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1158    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1160    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1162    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1164    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1166    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1168    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1170    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1174    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1176    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1178    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000000   Code   RO         1180    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x080001a6   0x080001a6   0x00000002   Code   RO         1181    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x080001a8   0x080001a8   0x00000002   Code   RO         1201    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x080001aa   0x080001aa   0x00000000   Code   RO         1214    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x080001aa   0x080001aa   0x00000000   Code   RO         1216    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x080001aa   0x080001aa   0x00000000   Code   RO         1219    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x080001aa   0x080001aa   0x00000000   Code   RO         1222    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x080001aa   0x080001aa   0x00000000   Code   RO         1224    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x080001aa   0x080001aa   0x00000000   Code   RO         1227    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x080001aa   0x080001aa   0x00000002   Code   RO         1228    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x080001ac   0x080001ac   0x00000000   Code   RO         1095    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x080001ac   0x080001ac   0x00000000   Code   RO         1104    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x080001ac   0x080001ac   0x00000006   Code   RO         1116    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x080001b2   0x080001b2   0x00000000   Code   RO         1106    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x080001b2   0x080001b2   0x00000004   Code   RO         1107    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x080001b6   0x080001b6   0x00000000   Code   RO         1109    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x080001b6   0x080001b6   0x00000008   Code   RO         1110    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x080001be   0x080001be   0x00000002   Code   RO         1135    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x080001c0   0x080001c0   0x00000000   Code   RO         1183    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x080001c0   0x080001c0   0x00000004   Code   RO         1184    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x080001c4   0x080001c4   0x00000006   Code   RO         1185    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x080001ca   0x080001ca   0x00000002   PAD
+    0x080001cc   0x080001cc   0x00000040   Code   RO          356  * .text               startup_stm32f10x_hd.o
+    0x0800020c   0x0800020c   0x00000006   Code   RO         1069    .text               c_w.l(heapauxi.o)
+    0x08000212   0x08000212   0x0000004a   Code   RO         1120    .text               c_w.l(sys_stackheap_outer.o)
+    0x0800025c   0x0800025c   0x00000012   Code   RO         1122    .text               c_w.l(exit.o)
+    0x0800026e   0x0800026e   0x00000002   PAD
+    0x08000270   0x08000270   0x00000008   Code   RO         1132    .text               c_w.l(libspace.o)
+    0x08000278   0x08000278   0x0000000c   Code   RO         1193    .text               c_w.l(sys_exit.o)
+    0x08000284   0x08000284   0x00000002   Code   RO         1204    .text               c_w.l(use_no_semi.o)
+    0x08000286   0x08000286   0x00000000   Code   RO         1206    .text               c_w.l(indicate_semi.o)
+    0x08000286   0x08000286   0x00000002   Code   RO         1006    i.BusFault_Handler  stm32f10x_it.o
+    0x08000288   0x08000288   0x00000002   Code   RO         1007    i.DebugMon_Handler  stm32f10x_it.o
+    0x0800028a   0x0800028a   0x0000000c   Code   RO          947    i.Delay             main.o
+    0x08000296   0x08000296   0x00000002   PAD
+    0x08000298   0x08000298   0x00000028   Code   RO          924    i.EIE3810_Buzzer_Init  eie3810_buzzer.o
+    0x080002c0   0x080002c0   0x0000009c   Code   RO          806    i.EIE3810_KEY_Init  eie3810_key.o
+    0x0800035c   0x0800035c   0x0000005c   Code   RO          572    i.EIE3810_LED_Init  eie3810_led.o
+    0x080003b8   0x080003b8   0x00000024   Code   RO          948    i.EIE3810_NVIC_SetPriorityGroup  main.o
+    0x080003dc   0x080003dc   0x00000018   Code   RO          875    i.EIE3810_SYSTICK_Init  eie3810_timer.o
+    0x080003f4   0x080003f4   0x00000178   Code   RO          360    i.EIE3810_TFTLCD_DrawCircle  eie3810_tftlcd.o
+    0x0800056c   0x0800056c   0x00000050   Code   RO          361    i.EIE3810_TFTLCD_DrawDot  eie3810_tftlcd.o
+    0x080005bc   0x080005bc   0x000000a0   Code   RO          362    i.EIE3810_TFTLCD_FillRectangle  eie3810_tftlcd.o
+    0x0800065c   0x0800065c   0x0000013c   Code   RO          363    i.EIE3810_TFTLCD_Init  eie3810_tftlcd.o
+    0x08000798   0x08000798   0x00000ecc   Code   RO          364    i.EIE3810_TFTLCD_SetParameter  eie3810_tftlcd.o
+    0x08001664   0x08001664   0x0000009c   Code   RO          365    i.EIE3810_TFTLCD_SevenSegment  eie3810_tftlcd.o
+    0x08001700   0x08001700   0x000000ec   Code   RO          366    i.EIE3810_TFTLCD_ShowChar  eie3810_tftlcd.o
+    0x080017ec   0x080017ec   0x000000f8   Code   RO          367    i.EIE3810_TFTLCD_ShowChar2412  eie3810_tftlcd.o
+    0x080018e4   0x080018e4   0x0000004e   Code   RO          626    i.EIE3810_TFTLCD_ShowString  eie3810_core.o
+    0x08001932   0x08001932   0x00000002   PAD
+    0x08001934   0x08001934   0x000000c4   Code   RO          627    i.EIE3810_TFTLCD_Welcome  eie3810_core.o
+    0x080019f8   0x080019f8   0x00000008   Code   RO          368    i.EIE3810_TFTLCD_WrCmd  eie3810_tftlcd.o
+    0x08001a00   0x08001a00   0x00000010   Code   RO          369    i.EIE3810_TFTLCD_WrCmdData  eie3810_tftlcd.o
+    0x08001a10   0x08001a10   0x0000000c   Code   RO          370    i.EIE3810_TFTLCD_WrData  eie3810_tftlcd.o
+    0x08001a1c   0x08001a1c   0x00000016   Code   RO          371    i.EIE3810_TFTLCD_clean  eie3810_tftlcd.o
+    0x08001a32   0x08001a32   0x00000062   Code   RO          372    i.EIE3810_TFTLCD_rect_0  eie3810_tftlcd.o
+    0x08001a94   0x08001a94   0x00000028   Code   RO          373    i.EIE3810_TFTLCD_rect_1  eie3810_tftlcd.o
+    0x08001abc   0x08001abc   0x00000056   Code   RO          374    i.EIE3810_TFTLCD_rect_2  eie3810_tftlcd.o
+    0x08001b12   0x08001b12   0x00000056   Code   RO          375    i.EIE3810_TFTLCD_rect_3  eie3810_tftlcd.o
+    0x08001b68   0x08001b68   0x00000046   Code   RO          376    i.EIE3810_TFTLCD_rect_4  eie3810_tftlcd.o
+    0x08001bae   0x08001bae   0x00000056   Code   RO          377    i.EIE3810_TFTLCD_rect_5  eie3810_tftlcd.o
+    0x08001c04   0x08001c04   0x00000062   Code   RO          378    i.EIE3810_TFTLCD_rect_6  eie3810_tftlcd.o
+    0x08001c66   0x08001c66   0x0000003a   Code   RO          379    i.EIE3810_TFTLCD_rect_7  eie3810_tftlcd.o
+    0x08001ca0   0x08001ca0   0x00000072   Code   RO          380    i.EIE3810_TFTLCD_rect_8  eie3810_tftlcd.o
+    0x08001d12   0x08001d12   0x00000062   Code   RO          381    i.EIE3810_TFTLCD_rect_9  eie3810_tftlcd.o
+    0x08001d74   0x08001d74   0x00000010   Code   RO          382    i.EIE3810_TFTLCD_rect_x  eie3810_tftlcd.o
+    0x08001d84   0x08001d84   0x00000010   Code   RO          383    i.EIE3810_TFTLCD_rect_y  eie3810_tftlcd.o
+    0x08001d94   0x08001d94   0x000000a8   Code   RO          521    i.EIE3810_USART1_init  eie3810_usart.o
+    0x08001e3c   0x08001e3c   0x0000008c   Code   RO          557    i.EIE3810_clock_tree_init  eie3810_clock.o
+    0x08001ec8   0x08001ec8   0x00000100   Code   RO          628    i.EIE3810_next_page  eie3810_core.o
+    0x08001fc8   0x08001fc8   0x00000048   Code   RO          629    i.EIE3810_third_page  eie3810_core.o
+    0x08002010   0x08002010   0x00000002   Code   RO         1008    i.HardFault_Handler  stm32f10x_it.o
+    0x08002012   0x08002012   0x00000002   PAD
+    0x08002014   0x08002014   0x0000005c   Code   RO          849    i.JOYPAD_Init       eie3810_joypad.o
+    0x08002070   0x08002070   0x00000074   Code   RO          850    i.JOYPAD_Read       eie3810_joypad.o
+    0x080020e4   0x080020e4   0x00000010   Code   RO          574    i.LED0_on           eie3810_led.o
+    0x080020f4   0x080020f4   0x00000002   Code   RO         1009    i.MemManage_Handler  stm32f10x_it.o
+    0x080020f6   0x080020f6   0x00000002   Code   RO         1010    i.NMI_Handler       stm32f10x_it.o
+    0x080020f8   0x080020f8   0x00000002   Code   RO         1011    i.PendSV_Handler    stm32f10x_it.o
+    0x080020fa   0x080020fa   0x00000002   Code   RO         1012    i.SVC_Handler       stm32f10x_it.o
+    0x080020fc   0x080020fc   0x00000004   Code   RO          300    i.SetSysClock       system_stm32f10x.o
+    0x08002100   0x08002100   0x000000b0   Code   RO          301    i.SetSysClockTo72   system_stm32f10x.o
+    0x080021b0   0x080021b0   0x00000098   Code   RO         1013    i.SysTick_Handler   stm32f10x_it.o
+    0x08002248   0x08002248   0x00000050   Code   RO          303    i.SystemInit        system_stm32f10x.o
+    0x08002298   0x08002298   0x00000214   Code   RO          879    i.TIM3_IRQHandler   eie3810_timer.o
+    0x080024ac   0x080024ac   0x00000024   Code   RO          880    i.TIM4_IRQHandler   eie3810_timer.o
+    0x080024d0   0x080024d0   0x00000020   Code   RO          630    i.USART1_IRQHandler  eie3810_core.o
+    0x080024f0   0x080024f0   0x00000002   Code   RO         1014    i.UsageFault_Handler  stm32f10x_it.o
+    0x080024f2   0x080024f2   0x00000002   PAD
+    0x080024f4   0x080024f4   0x00000068   Code   RO          631    i.check_pause       eie3810_core.o
+    0x0800255c   0x0800255c   0x00000064   Code   RO          632    i.direction_lookup  eie3810_core.o
+    0x080025c0   0x080025c0   0x000000c8   Code   RO          633    i.display_time      eie3810_core.o
+    0x08002688   0x08002688   0x00000018   Code   RO          634    i.draw_the_ball     eie3810_core.o
+    0x080026a0   0x080026a0   0x00000078   Code   RO          635    i.draw_the_board_1  eie3810_core.o
+    0x08002718   0x08002718   0x00000078   Code   RO          636    i.draw_the_board_2  eie3810_core.o
+    0x08002790   0x08002790   0x00000058   Code   RO          637    i.hit_board_1       eie3810_core.o
+    0x080027e8   0x080027e8   0x00000058   Code   RO          638    i.hit_board_2       eie3810_core.o
+    0x08002840   0x08002840   0x00000020   Code   RO          639    i.hit_the_left      eie3810_core.o
+    0x08002860   0x08002860   0x00000024   Code   RO          640    i.hit_the_lower     eie3810_core.o
+    0x08002884   0x08002884   0x00000024   Code   RO          641    i.hit_the_right     eie3810_core.o
+    0x080028a8   0x080028a8   0x00000020   Code   RO          642    i.hit_the_upper     eie3810_core.o
+    0x080028c8   0x080028c8   0x00000014   Code   RO          807    i.key_0_on          eie3810_key.o
+    0x080028dc   0x080028dc   0x00000014   Code   RO          808    i.key_1_on          eie3810_key.o
+    0x080028f0   0x080028f0   0x00000014   Code   RO          809    i.key_2_on          eie3810_key.o
+    0x08002904   0x08002904   0x00000014   Code   RO          810    i.key_up_on         eie3810_key.o
+    0x08002918   0x08002918   0x0000014c   Code   RO          949    i.main              main.o
+    0x08002a64   0x08002a64   0x00000020   Code   RO          925    i.makebuzzer        eie3810_buzzer.o
+    0x08002a84   0x08002a84   0x00000050   Code   RO          643    i.move_board        eie3810_core.o
+    0x08002ad4   0x08002ad4   0x00000070   Code   RO          644    i.move_board_1      eie3810_core.o
+    0x08002b44   0x08002b44   0x00000054   Code   RO          645    i.move_board_2      eie3810_core.o
+    0x08002b98   0x08002b98   0x000000b8   Code   RO          646    i.move_the_ball     eie3810_core.o
+    0x08002c50   0x08002c50   0x00000094   Code   RO          647    i.print_end_screen  eie3810_core.o
+    0x08002ce4   0x08002ce4   0x0000007c   Code   RO          648    i.set_direction     eie3810_core.o
+    0x08002d60   0x08002d60   0x0000007c   Code   RO          649    i.set_number        eie3810_core.o
+    0x08002ddc   0x08002ddc   0x00000060   Code   RO          650    i.show_bounce       eie3810_core.o
+    0x08002e3c   0x08002e3c   0x000000c4   Code   RO         1073    x$fpl$fadd          fz_ws.l(faddsub_clz.o)
+    0x08002f00   0x08002f00   0x0000000c   Code   RO         1096    x$fpl$fcheck1       fz_ws.l(fcheck1.o)
+    0x08002f0c   0x08002f0c   0x00000184   Code   RO         1080    x$fpl$fdiv          fz_ws.l(fdiv.o)
+    0x08003090   0x08003090   0x0000003e   Code   RO         1083    x$fpl$ffixu         fz_ws.l(ffixu.o)
+    0x080030ce   0x080030ce   0x00000002   PAD
+    0x080030d0   0x080030d0   0x00000026   Code   RO         1087    x$fpl$ffltu         fz_ws.l(fflt_clz.o)
+    0x080030f6   0x080030f6   0x0000008c   Code   RO         1098    x$fpl$fnaninf       fz_ws.l(fnaninf.o)
+    0x08003182   0x08003182   0x0000000a   Code   RO         1100    x$fpl$fretinf       fz_ws.l(fretinf.o)
+    0x0800318c   0x0800318c   0x00000014   Code   RO         1074    x$fpl$frsb          fz_ws.l(faddsub_clz.o)
+    0x080031a0   0x080031a0   0x000000ea   Code   RO         1075    x$fpl$fsub          fz_ws.l(faddsub_clz.o)
+    0x0800328a   0x0800328a   0x00000064   Code   RO         1118    x$fpl$retnan        fz_ws.l(retnan.o)
+    0x080032ee   0x080032ee   0x0000004c   Code   RO         1093    x$fpl$scalbnf       fz_ws.l(scalbnf.o)
+    0x0800333a   0x0800333a   0x00000030   Code   RO         1130    x$fpl$trapveneer    fz_ws.l(trapv.o)
+    0x0800336a   0x0800336a   0x00000000   Code   RO         1102    x$fpl$usenofp       fz_ws.l(usenofp.o)
+    0x0800336a   0x0800336a   0x0000134c   Data   RO          385    .constdata          eie3810_tftlcd.o
+    0x080046b6   0x080046b6   0x00000002   PAD
+    0x080046b8   0x080046b8   0x00000020   Data   RO         1259    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080046d8, Size: 0x00000038, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x080046d8   0x00000028   Data   RW          651    .data               eie3810_core.o
+    0x20000028   0x08004700   0x00000001   Data   RW          652    .data               eie3810_core.o
+    0x20000029   0x08004701   0x00000001   Data   RW          654    .data               eie3810_core.o
+    0x2000002a   0x08004702   0x00000001   Data   RW          655    .data               eie3810_core.o
+    0x2000002b   0x08004703   0x00000001   Data   RW          656    .data               eie3810_core.o
+    0x2000002c   0x08004704   0x00000001   Data   RW          881    .data               eie3810_timer.o
+    0x2000002d   0x08004705   0x00000001   Data   RW          882    .data               eie3810_timer.o
+    0x2000002e   0x08004706   0x00000001   Data   RW          883    .data               eie3810_timer.o
+    0x2000002f   0x08004707   0x00000001   Data   RW          884    .data               eie3810_timer.o
+    0x20000030   0x08004708   0x00000004   Data   RW          950    .data               main.o
+    0x20000034   0x0800470c   0x00000004   Data   RW          951    .data               main.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000038, Load base: 0x08004710, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000038        -       0x00000060   Zero   RW         1133    .bss                c_w.l(libspace.o)
+    0x20000098        -       0x00000200   Zero   RW          354    HEAP                startup_stm32f10x_hd.o
+    0x20000298        -       0x00000400   Zero   RW          353    STACK               startup_stm32f10x_hd.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+         0          0          0          0          0         32   core_cm3.o
+        72         18          0          0          0        931   eie3810_buzzer.o
+       140         10          0          0          0        618   eie3810_clock.o
+      2566        380          0         44          0      15890   eie3810_core.o
+       208         22          0          0          0       1068   eie3810_joypad.o
+       236         30          0          0          0       2540   eie3810_key.o
+       108         16          0          0          0        897   eie3810_led.o
+      6284         56       4940          0          0      18607   eie3810_tftlcd.o
+       592         14          0          4          0       2069   eie3810_timer.o
+       168         18          0          0          0        742   eie3810_usart.o
+       380         78          0          8          0       1940   main.o
+        64         26        304          0       1536        808   startup_stm32f10x_hd.o
+       168         28          0          0          0       3958   stm32f10x_it.o
+         0          0          0          0          0     207608   stm32f10x_rcc.o
+       260         26          0          0          0       1873   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+     11254        722       5278         56       1536     259581   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         8          0          2          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        52          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+        18          0          0          0          0         80   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+       450          8          0          0          0        236   faddsub_clz.o
+        12          4          0          0          0         68   fcheck1.o
+       388         76          0          0          0         96   fdiv.o
+        62          4          0          0          0         84   ffixu.o
+        38          0          0          0          0         68   fflt_clz.o
+       140          4          0          0          0         84   fnaninf.o
+        10          0          0          0          0         68   fretinf.o
+       100          0          0          0          0         68   retnan.o
+        76          0          0          0          0         68   scalbnf.o
+        48          0          0          0          0         68   trapv.o
+         0          0          0          0          0          0   usenofp.o
+
+    ----------------------------------------------------------------------
+      1604        112          0          0         96       1492   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       272         16          0          0         96        584   c_w.l
+      1324         96          0          0          0        908   fz_ws.l
+
+    ----------------------------------------------------------------------
+      1604        112          0          0         96       1492   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     12858        834       5278         56       1632     256389   Grand Totals
+     12858        834       5278         56       1632     256389   ELF Image Totals
+     12858        834       5278         56          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                18136 (  17.71kB)
+    Total RW  Size (RW Data + ZI Data)              1688 (   1.65kB)
+    Total ROM Size (Code + RO Data + RW Data)      18192 (  17.77kB)
+
+==============================================================================
+

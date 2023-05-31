@@ -1,0 +1,116 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: cuser cuser, cuhksz, LIC=HPP8U-SPIIB-5DAKL-Y18R2-VUYX7-SR4R3
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Essential  Version: 5.24.1
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      UL2CM3.DLL V1.160.3.0
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+C:\Users\120090128\OneDrive - CUHK-Shenzhen\¥Û»˝…œ\EIE3810\Lab6\Experiment2\Lab0.uvprojx
+Project File Date:  12/16/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Lab0'
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+assembling startup_stm32f10x_hd.s...
+compiling stm32f10x_rcc.c...
+compiling EIE3810_USART.c...
+compiling EIE3810_Clock.c...
+compiling EIE3810_TFTLCD.c...
+compiling EIE3810_LED.c...
+Board\EIE3810_LED.c(39): warning:  #940-D: missing return statement at end of non-void function "LED1_off" 
+  }
+Board\EIE3810_LED.c(43): warning:  #940-D: missing return statement at end of non-void function "LED1_on" 
+  }
+Board\EIE3810_LED.c(60): warning:  #1-D: last line of file ends without a newline
+  }
+Board\EIE3810_LED.c: 3 warnings, 0 errors
+compiling EIE3810_Core.c...
+Board\EIE3810_Core.h(37): warning:  #1295-D: Deprecated declaration move_stick - give arg types
+  void move_stick();
+Board\EIE3810_Timer.h(9): warning:  #1295-D: Deprecated declaration EIE3810_SYSTICK_Init - give arg types
+  void EIE3810_SYSTICK_Init();
+Board\EIE3810_Timer.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+Board\EIE3810_Core.c(62): warning:  #223-D: function "Delay" declared implicitly
+  	Delay(0x3FFFFF);
+Board\EIE3810_Core.c(120): warning:  #223-D: function "Delay" declared implicitly
+  	Delay(10000000);
+Board\EIE3810_Core.c(142): warning:  #223-D: function "Delay" declared implicitly
+  	Delay(0xFFFFFF);
+Board\EIE3810_Core.c(475): warning:  #223-D: function "Delay" declared implicitly
+  	Delay(10000000);
+Board\EIE3810_Core.c: 7 warnings, 0 errors
+compiling EIE3810_Interrupt.c...
+compiling EIE3810_key.c...
+Board\EIE3810_key.c(60): warning:  #1-D: last line of file ends without a newline
+  }
+Board\EIE3810_key.c: 1 warning, 0 errors
+compiling EIE3810_Joypad.c...
+Board\EIE3810_Core.h(37): warning:  #1295-D: Deprecated declaration move_stick - give arg types
+  void move_stick();
+Board\EIE3810_Joypad.c(32): warning:  #223-D: function "Delay" declared implicitly
+  	Delay(80); // Delay the time required by PB11 time sequence protocol to activate JOYPAD
+Board\EIE3810_Joypad.c: 2 warnings, 0 errors
+compiling EIE3810_Buzzer.c...
+Board\EIE3810_Buzzer.c(30): warning:  #223-D: function "Delay" declared implicitly
+  	Delay(0x1FFFF);
+Board\EIE3810_Buzzer.c(32): warning:  #1-D: last line of file ends without a newline
+  }
+Board\EIE3810_Buzzer.c: 2 warnings, 0 errors
+compiling EIE3810_Timer.c...
+Board\EIE3810_Timer.h(9): warning:  #1295-D: Deprecated declaration EIE3810_SYSTICK_Init - give arg types
+  void EIE3810_SYSTICK_Init();
+Board\EIE3810_Timer.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+Board\EIE3810_Timer.c: 2 warnings, 0 errors
+compiling stm32f10x_it.c...
+.\Board\EIE3810_Core.h(37): warning:  #1295-D: Deprecated declaration move_stick - give arg types
+  void move_stick();
+User\stm32f10x_it.c: 1 warning, 0 errors
+compiling main.c...
+.\Board\EIE3810_Core.h(37): warning:  #1295-D: Deprecated declaration move_stick - give arg types
+  void move_stick();
+.\Board\EIE3810_Timer.h(9): warning:  #1295-D: Deprecated declaration EIE3810_SYSTICK_Init - give arg types
+  void EIE3810_SYSTICK_Init();
+.\Board\EIE3810_Timer.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+User\main.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=13206 RO-data=5278 RW-data=64 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\_Lab0.axf" - 0 Error(s), 21 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.2.0.pack
+                Keil.STM32F1xx_DFP.2.2.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Lab0
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
